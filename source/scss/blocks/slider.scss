@@ -276,3 +276,30 @@
     }
   }
 }
+
+.swiper-slide-next .slider__item-text,
+.swiper-slide-active .slider__item-text {
+  animation-name: fadeInRight;
+}
+
+.swiper-slide-active .slider__item-text {
+  animation-duration: .8s;
+}
+
+.swiper-slide-next .slider__item-text {
+   animation-duration: 1s;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(40%, 0, 0);
+    transform: translate3d(40%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}

@@ -93,6 +93,7 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.27;
+  animation: fadeInUp .5s ease-out;
 
   @media (min-width: $stop-scaling) {
     width: 509px;
@@ -160,5 +161,19 @@
   @media (min-width: $stop-scaling) {
     margin: 0 0 0 -5px;
     font-size: 48px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
