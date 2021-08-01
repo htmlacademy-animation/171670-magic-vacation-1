@@ -6,6 +6,9 @@
       opacity: 1;
       pointer-events: auto;
     }
+    svg {
+      transform: translate(-50%, -50%);
+    }
   }
 }
 
@@ -35,6 +38,7 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
+    transition: all .3s ease-in-out;
   }
 
   svg {
@@ -168,6 +172,8 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
+  overflow:  hidden;
+  transition: color .3s;
 
   @media (min-width: $stop-scaling) {
     width: 40px;
@@ -204,12 +210,16 @@
 
   svg {
     @include center;
+    transform: translate(-50%, 200%);
+    transition-property: transform;
+    transition-timing-function: linear;
   }
 
   &--fb {
     svg {
       width: 0.8rem;
       height: 1.7rem;
+      transition-duration: .3s;
 
       @media (min-width: $stop-scaling) {
         width: 8px;
@@ -222,6 +232,7 @@
     svg {
       width: 1.5rem;
       height: 1.5rem;
+      transition-duration: .35s;
 
       @media (min-width: $stop-scaling) {
         width: 15px;
@@ -234,6 +245,7 @@
     svg {
       width: 1.7rem;
       height: 1rem;
+      transition-duration: .4s;
 
       @media (min-width: $stop-scaling) {
         width: 10px;

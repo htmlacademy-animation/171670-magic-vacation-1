@@ -43,6 +43,9 @@
   border: 0;
   border-radius: 3rem;
   outline: none;
+  animation-name: fadeInRight;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
 
   &:focus {
     border: 1px solid $c-purple;
@@ -146,3 +149,16 @@
     }
   }
 }
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
