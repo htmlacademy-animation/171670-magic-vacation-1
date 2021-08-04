@@ -56,6 +56,7 @@ body {
 
     .page-header__menu a.active::after {
       width: 100%;
+      transition: width .3s .2s linear;
     }
 
     .social-block__toggler svg {

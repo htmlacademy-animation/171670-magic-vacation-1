@@ -253,6 +253,7 @@
       background-color: $c-light;
       display: block;
       right: 0;
+      transition: all .3s linear;
 
       @media (max-width: $tablet) and (orientation: portrait) {
         left: 0;
@@ -270,7 +271,6 @@
     &.active {
       &::after {
         left: 0;
-        transition: width .3s .2s linear;
       }
     }
 
@@ -278,12 +278,13 @@
     &:focus {
       color: $c-purple;
       outline: none;
+      transition: color .3s;
 
       &::after {
         opacity: 1;
         background-color: $c-purple;
         width: 100%;
-        right: auto;
+        right:auto;
         left: 0;
       }
     }
