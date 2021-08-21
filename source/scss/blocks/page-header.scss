@@ -241,7 +241,8 @@
     display: block;
     color: inherit;
     padding: 0 0.5em 0.5em;
-    transition: color .5s;
+    opacity: 0;
+    transition: opacity .4s .3s cubic-bezier(.15,.81,.91,.62);
 
     &::after {
       content: "";
@@ -252,7 +253,7 @@
       background-color: $c-light;
       display: block;
       right: 0;
-      transition: width .5s;
+      transition: all .3s linear;
 
       @media (max-width: $tablet) and (orientation: portrait) {
         left: 0;
@@ -269,7 +270,7 @@
 
     &.active {
       &::after {
-        width: 100%;
+        left: 0;
       }
     }
 
@@ -277,12 +278,13 @@
     &:focus {
       color: $c-purple;
       outline: none;
+      transition: color .3s;
 
       &::after {
         opacity: 1;
         background-color: $c-purple;
         width: 100%;
-        right: auto;
+        right:auto;
         left: 0;
       }
     }
@@ -304,5 +306,17 @@
   @media (max-width: $mobile) and (orientation: landscape) {
     margin-left: 0;
     width: 100%;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-35%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
