@@ -356,3 +356,18 @@
 .screen--rules {
   background-color: $c-dark;
 }
+
+.screen__fill {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #5f458c;
+  z-index: 1;
+  transition: height .4s ease-out;
+}
+
+.screen--story.animate .screen__fill {
+  height: 100%;
+}
