@@ -3094,7 +3094,7 @@ img {
 .rules__item {
   position: relative;
   margin: 0 0 6.2rem;
-  padding-top: 0.6rem;
+  padding-top: 0.8rem;
   padding-left: 6.5rem;
   break-inside: avoid;
 }
@@ -3126,7 +3126,7 @@ img {
   content: counter(li);
   counter-increment: li;
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 0;
   width: 4.5rem;
   height: 4.5rem;
