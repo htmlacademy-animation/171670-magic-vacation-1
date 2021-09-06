@@ -371,3 +371,29 @@
 .screen--story.animate .screen__fill {
   height: 100%;
 }
+
+.screen--rules.active .rules__item {
+  &::before {
+    transition-property: opacity, transform;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.17,.67,.84,1.30);
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+
+  p {
+    transition-property: opacity, transform;
+    transition-duration: .3s;
+    transition-timing-function: ease-in;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.screen--rules.active .rules__link {
+  opacity: 1;
+  transform: translate3d(5.6rem, 0, 0);
+  transition-property: opacity, transform;
+  transition-duration: .3s;
+  transition-timing-function: ease-in;
+}
